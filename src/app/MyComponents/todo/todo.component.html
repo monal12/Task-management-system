@@ -1,0 +1,11 @@
+<div class="container">
+    <h1 class="text-center mb-3">Daily Tasks</h1>
+<app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
+<h4>Your Tasks:</h4>
+<div *ngIf="this.dailytask.length==0; else elseBlock">No Tasks to display</div>
+<ng-template #elseBlock>
+    <div *ngFor="let d of dailytask">
+        <app-todo-item [d]="d" (del)="deltodo($event)" (todoCheckbox)="toggleTodo($event)"></app-todo-item>
+    </div>
+</ng-template>
+</div>

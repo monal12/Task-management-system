@@ -1,0 +1,9 @@
+<div class="mt-3">
+<h5 [ngClass]="{'strike':!d.active }">{{d.title}}</h5>
+<p [ngClass]="{'strike':!d.active }">{{d.desc}}</p>
+<div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" (click)="onCheckboxClick(d)" [checked]="!d.active">
+    <label class="form-check-label" for="exampleCheck1">done</label>
+</div>
+<button class="btn btn-sm btn-primary" (click)="onclick(d)">Delete</button>
+</div>
