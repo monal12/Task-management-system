@@ -7,5 +7,6 @@
     <div *ngFor="let d of dailytask">
         <app-todo-item [d]="d" (del)="deltodo($event)" (todoCheckbox)="toggleTodo($event)"></app-todo-item>
     </div>
+
 </ng-template>
 </div>
